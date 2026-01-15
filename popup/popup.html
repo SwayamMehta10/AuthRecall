@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignPost</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SignPost</h1>
+    </header>
+
+    <!-- Current site section -->
+    <section class="current-site">
+      <div class="section-label">Current Site</div>
+      <div id="current-site-info" class="site-info">
+        <div class="loading">Loading...</div>
+      </div>
+    </section>
+
+    <!-- Manual Entry (collapsible) -->
+    <section class="manual-entry">
+      <button id="toggle-manual-entry" class="toggle-btn"><span>Add Entry Manually</span><svg class="plus-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div id="manual-entry-form" class="form-container" style="display: none;">
+        <div class="form-row">
+          <input type="text" id="manual-domain" placeholder="Domain (e.g., example.com)">
+        </div>
+        <div class="form-row">
+          <input type="email" id="manual-email" placeholder="Email (e.g., you@gmail.com)">
+        </div>
+        <button id="save-manual-entry" class="btn btn-primary btn-full">Save</button>
+      </div>
+    </section>
+
+    <!-- All Entries (collapsible) -->
+    <section class="all-entries">
+      <button id="toggle-all-entries" class="toggle-btn">
+        <span class="toggle-text">View All Entries</span>
+        <div class="toggle-badges">
+          <span class="badge badge-sites"><span id="badge-sites-count">0</span> sites</span>
+          <span class="badge badge-accounts"><span id="badge-accounts-count">0</span> accounts</span>
+        </div>
+        <span class="arrow">▼</span>
+      </button>
+      <div id="entries-panel" class="entries-panel" style="display: none;">
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search...">
+        </div>
+        <div id="sites-list" class="sites-list">
+          <div class="empty-state">No sites tracked yet</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <section class="actions">
+      <button id="export-btn" class="btn btn-action">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        Export
+      </button>
+      <button id="import-btn" class="btn btn-action">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Import
+      </button>
+      <button id="clear-all-btn" class="btn btn-action btn-danger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="3 6 5 6 21 6"/>
+          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+        </svg>
+        Clear
+      </button>
+    </section>
+
+    <!-- Settings -->
+    <section class="settings">
+      <button id="toggle-settings" class="toggle-btn"><span>Integrations</span><span class="arrow">▼</span></button>
+      <div id="settings-panel" class="settings-panel" style="display: none;">
+        
+        <!-- Notion Toggle -->
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-label">Notion Sync</span>
+            <span class="setting-desc">Backup entries to Notion</span>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="notion-enabled">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <!-- Notion Config (shown when enabled) -->
+        <div id="notion-config" class="notion-config" style="display: none;">
+          <div class="notion-instructions">
+            <div class="instruction-step">
+              <span class="step-num">1</span>
+              <span>Go to <a href="https://www.notion.so/my-integrations" target="_blank">notion.so/my-integrations</a></span>
+            </div>
+            <div class="instruction-step">
+              <span class="step-num">2</span>
+              <span>Create integration, copy the secret</span>
+            </div>
+            <div class="instruction-step">
+              <span class="step-num">3</span>
+              <span>Create a database with "Domain" (title) and "Email" columns</span>
+            </div>
+            <div class="instruction-step">
+              <span class="step-num">4</span>
+              <span>Connect integration to database (... menu > Connections)</span>
+            </div>
+            <div class="instruction-step">
+              <span class="step-num">5</span>
+              <span>Copy database ID from URL</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <input type="password" id="notion-api-key" placeholder="Integration Secret (secret_...)">
+          </div>
+          <div class="form-row">
+            <input type="text" id="notion-database-id" placeholder="Database ID (32 characters from URL)">
+          </div>
+        </div>
+
+        <!-- Manual Sync Button -->
+        <div id="sync-now-container" style="display: none;">
+          <button id="sync-now-btn" class="btn btn-primary btn-full">Sync Now</button>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <input type="file" id="import-file-input" accept=".json" style="display: none;">
+  <script src="../utils/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
