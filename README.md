@@ -8,38 +8,38 @@ Never forget which Google account you used to sign in to your favorite websites.
 
 ## ✨ Features
 
-### 🔍 **Automatic Detection**
+### **Automatic Detection**
 
 SignPost intelligently monitors your Google OAuth logins and automatically remembers which email you used for each website. No manual tracking required.
 
-### 🎯 **Visual Badge Indicator**
+### **Visual Badge Indicator**
 
 See at a glance which account you used on any site with the extension badge that displays your email directly in the toolbar.
 
-### 📋 **Comprehensive Dashboard**
+### **Comprehensive Dashboard**
 
 View all your tracked accounts and websites in an organized, searchable popup interface. Quickly find which account goes with which service.
 
-### ✏️ **Manual Entry Support**
+### **Manual Entry Support**
 
 Forgot to install SignPost before logging in? No problem! Add accounts manually for any website.
 
-### 🔐 **Privacy First**
+### **Privacy First**
 
 -   All data is stored **locally** in your browser
 -   No data is sent to external servers
 -   You own and control your information
 -   Optional Notion sync (requires your own API key)
 
-### 📤 **Import & Export**
+### **Import & Export**
 
 Easily backup your account mappings or transfer them between browsers with one-click import/export functionality.
 
-### 🔗 **Notion Integration** (Optional)
+### **Notion Integration** (Optional)
 
 Sync your account data to Notion for backup or cross-browser access. You maintain full control with your own API key.
 
-### 🔔 **Smart Notifications**
+### **Smart Notifications**
 
 Get notified when SignPost detects a new Google login, keeping you informed of your authentication activity.
 
@@ -71,9 +71,9 @@ SignPost uses a universal scanner that monitors network responses for email patt
 
 If you find SignPost helpful, please consider:
 
--   ⭐ Starring this repository
--   📝 Leaving a review on the Chrome Web Store
--   🐛 Reporting bugs or suggesting features via GitHub Issues
--   ☕ Supporting the development (contributions welcome!)
+-   Starring this repository
+-   Leaving a review on the Chrome Web Store
+-   Reporting bugs or suggesting features via GitHub Issues
+-   Supporting the development (contributions welcome!)
 
 Your feedback helps make SignPost better for everyone!
