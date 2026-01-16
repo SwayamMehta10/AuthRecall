@@ -1,4 +1,4 @@
-// SignPost: Universal Email Scanner
+// AuthRecall: Universal Email Scanner
 // Catches emails from user profile/auth endpoints only
 
 (function() {
@@ -143,13 +143,13 @@
   const originalXHRSend = XMLHttpRequest.prototype.send;
 
   XMLHttpRequest.prototype.open = function(method, url, ...rest) {
-    this._signpost_url = url;
+    this._authrecall_url = url;
     return originalXHROpen.call(this, method, url, ...rest);
   };
 
   XMLHttpRequest.prototype.send = function(...args) {
     this.addEventListener('load', async function() {
-      const url = this._signpost_url || '';
+      const url = this._authrecall_url || '';
       if (!isUserEndpoint(url)) return;
       
       try {

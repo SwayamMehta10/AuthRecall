@@ -1,4 +1,4 @@
-// Background service worker for SignPost - Universal Email Scanner
+// Background service worker for AuthRecall - Universal Email Scanner
 importScripts('../utils/storage.js', '../utils/notion-sync.js');
 
 const storage = new StorageManager();
@@ -78,10 +78,10 @@ async function handleEmailDetected(email, tab) {
     }
     
     // Show notification
-    chrome.notifications.create(`signpost-${Date.now()}`, {
+    chrome.notifications.create(`authrecall-${Date.now()}`, {
       type: 'basic',
       iconUrl: chrome.runtime.getURL('icons/icon48.png'),
-      title: 'SignPost: Account Tracked',
+      title: 'AuthRecall: Account Tracked',
       message: `${email} → ${domain}`
     }).catch(() => {});
     
@@ -113,10 +113,10 @@ async function handleOAuthAccountSelected(email, domain) {
     });
     
     // Show notification
-    chrome.notifications.create(`signpost-${Date.now()}`, {
+    chrome.notifications.create(`authrecall-${Date.now()}`, {
       type: 'basic',
       iconUrl: chrome.runtime.getURL('icons/icon48.png'),
-      title: 'SignPost: OAuth Account Tracked',
+      title: 'AuthRecall: OAuth Account Tracked',
       message: `${email} → ${domain}`
     }).catch(() => {});
     

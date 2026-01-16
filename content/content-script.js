@@ -1,4 +1,4 @@
-// Content script for SignPost Universal Email Scanner
+// Content script for AuthRecall Universal Email Scanner
 (function() {
   'use strict';
 

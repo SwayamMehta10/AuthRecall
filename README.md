@@ -1,6 +1,6 @@
-# SignPost - OAuth Account Tracker
+# AuthRecall - OAuth Account Tracker
 
-Never forget which Google account you used to sign in to your favorite websites. SignPost automatically tracks and remembers your OAuth authentication history.
+Never forget which Google account you used to sign in to your favorite websites. AuthRecall automatically tracks and remembers your OAuth authentication history.
 
 ## 🚀 Download
 
@@ -10,7 +10,7 @@ Never forget which Google account you used to sign in to your favorite websites.
 
 ### **Automatic Detection**
 
-SignPost intelligently monitors your Google OAuth logins and automatically remembers which email you used for each website. No manual tracking required.
+AuthRecall intelligently monitors your Google OAuth logins and automatically remembers which email you used for each website. No manual tracking required.
 
 ### **Visual Badge Indicator**
 
@@ -22,7 +22,7 @@ View all your tracked accounts and websites in an organized, searchable popup in
 
 ### **Manual Entry Support**
 
-Forgot to install SignPost before logging in? No problem! Add accounts manually for any website.
+Forgot to install AuthRecall before logging in? No problem! Add accounts manually for any website.
 
 ### **Privacy First**
 
@@ -41,16 +41,16 @@ Sync your account data to Notion for backup or cross-browser access. You maintai
 
 ### **Smart Notifications**
 
-Get notified when SignPost detects a new Google login, keeping you informed of your authentication activity.
+Get notified when AuthRecall detects a new Google login, keeping you informed of your authentication activity.
 
 ## 📖 How It Works
 
 1. **Install the extension** from the Chrome Web Store
 2. **Log in with Google** on any website
-3. **SignPost automatically saves** which email you used
+3. **AuthRecall automatically saves** which email you used
 4. **Check the badge** next time you visit to see which account to use
 
-SignPost uses a universal scanner that monitors network responses for email patterns and detects Google OAuth authentication flows automatically.
+AuthRecall uses a universal scanner that monitors network responses for email patterns and detects Google OAuth authentication flows automatically.
 
 ## 🛠️ Manual Installation (For Developers)
 
@@ -58,7 +58,7 @@ SignPost uses a universal scanner that monitors network responses for email patt
 2. Open `chrome://extensions` in Chrome
 3. Enable "Developer mode" (toggle in top right)
 4. Click "Load unpacked"
-5. Select the SignPost folder
+5. Select the AuthRecall folder
 
 ## 💡 Use Cases
 
@@ -69,11 +69,11 @@ SignPost uses a universal scanner that monitors network responses for email patt
 
 ## 🙏 Support
 
-If you find SignPost helpful, please consider:
+If you find AuthRecall helpful, please consider:
 
 -   Starring this repository
 -   Leaving a review on the Chrome Web Store
 -   Reporting bugs or suggesting features via GitHub Issues
 -   Supporting the development (contributions welcome!)
 
-Your feedback helps make SignPost better for everyone!
+Your feedback helps make AuthRecall better for everyone!

@@ -1,4 +1,4 @@
-// SignPost: Google OAuth Detector
+// AuthRecall: Google OAuth Detector
 // Runs on accounts.google.com to capture which account is used for OAuth
 
 (function() {
@@ -42,7 +42,7 @@
       const clientId = params.get('client_id');
       if (clientId) {
         // Store client_id for later matching
-        sessionStorage.setItem('signpost_oauth_client', clientId);
+        sessionStorage.setItem('authrecall_oauth_client', clientId);
       }
       
       // Check referrer
@@ -122,8 +122,8 @@
       const email = findEmail();
       if (email && targetSite) {
         // Store in sessionStorage for the redirect back
-        sessionStorage.setItem('signpost_pending_email', email);
-        sessionStorage.setItem('signpost_pending_domain', targetSite);
+        sessionStorage.setItem('authrecall_pending_email', email);
+        sessionStorage.setItem('authrecall_pending_domain', targetSite);
       }
     }, 1000);
     
@@ -133,8 +133,8 @@
   
   // Before unload, try to capture the selection
   window.addEventListener('beforeunload', function() {
-    const email = sessionStorage.getItem('signpost_pending_email');
-    const domain = sessionStorage.getItem('signpost_pending_domain');
+    const email = sessionStorage.getItem('authrecall_pending_email');
+    const domain = sessionStorage.getItem('authrecall_pending_domain');
     
     if (email && domain) {
       // Can't do async here, use sendMessage synchronously

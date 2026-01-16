@@ -1,4 +1,4 @@
-// SignPost Popup Script
+// AuthRecall Popup Script
 
 const storage = new StorageManager();
 
@@ -358,7 +358,7 @@ function setupEventListeners() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `signpost-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `authrecall-backup-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
     showToast(`Exported ${Object.keys(accounts).length} entries`, 'success');

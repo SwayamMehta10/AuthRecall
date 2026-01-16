@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "SignPost - OAuth Account Tracker",
+  "name": "AuthRecall - OAuth Account Tracker",
   "version": "1.0.0",
   "description": "Track which Google accounts you've used to authenticate on different websites",
   "permissions": [
