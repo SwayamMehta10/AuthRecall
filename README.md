@@ -4,7 +4,7 @@ Never forget which Google account you used to sign in to your favorite websites.
 
 ## 🚀 Download
 
-**[Install from Chrome Web Store →](https://chrome.google.com/webstore)**
+***Launching Soon on the Chrome Web Store!***
 
 ## ✨ Features
 
