@@ -2,6 +2,8 @@
 
 Never forget which Google account you used to sign in to your favorite websites. AuthRecall automatically tracks and remembers your OAuth authentication history.
 
+https://github.com/user-attachments/assets/6896cf5e-5fa4-49b5-8264-5aa5c4f39adb
+
 ## 🚀 Download
 
 ***Launching Soon on the Chrome Web Store!***
