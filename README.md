@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/6896cf5e-5fa4-49b5-8264-5aa5c4f39adb
 
 ## 🚀 Download
 
-***Launching Soon on the Chrome Web Store!***
+[Download from the Chrome Web Store](https://chromewebstore.google.com/detail/authrecall-oauth-account/gelhlmfcildaoallccooccadnmahfbnd)
 
 ## ✨ Features
 
